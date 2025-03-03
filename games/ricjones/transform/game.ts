@@ -1,17 +1,16 @@
 import { assets } from "@kaplayjs/crew";
-import { Minigame } from "../../../src/kaplayware";
-import { KAPLAYCtx } from "kaplay";
+import { Minigame } from "../../../src/types";
 
-const newGame: Minigame = {
+const tGame: Minigame = {
   prompt: "transform",
   author: "ricjones",
   hue: 1,
-  urlPrefix: "games/ricjones/assets",
+  urlPrefix: "",
   load(ctx) {
     ctx.loadSprite("bean", assets.bean.sprite);
   },
-  start(ctx: KAPLAYCtx) {
-    const game = ctx.make([ctx.timer()]);
+  start(ctx) {
+		const game = ctx.make([ctx.timer()]);
 
     const bean = game.add([ctx.sprite("bean"), ctx.pos(100, 100)]);
 
@@ -26,4 +25,4 @@ const newGame: Minigame = {
   },
 };
 
-export default newGame;
+export default tGame;

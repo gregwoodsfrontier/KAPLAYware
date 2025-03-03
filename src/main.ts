@@ -2,13 +2,13 @@ import getGame from "../games/amyspark-ng/get/game";
 import spamGame from "../games/amyspark-ng/spam/game";
 import chaseGame from "../games/nanopoison/chase/game";
 import kaplayware from "./kaplayware";
-import transformGame from "../games/ricjones/transform/game";
+import tGame from "../games/ricjones/transform/game";
 
 const games = [
   //getGame,
   //spamGame,
   //chaseGame,
-  transformGame,
+  tGame,
 ];
 
 const ware = kaplayware(games);
